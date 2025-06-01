@@ -1,0 +1,57 @@
+# Git / Version Control
+.git/
+.gitignore
+
+# Development Environment
+.devcontainer/
+.vscode/
+*.code-workspace
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+.venv/
+venv/
+env/
+*.egg-info/
+# dist/ and build/ are where PyInstaller creates the executable,
+# but this happens on the user's machine, not part of the published package.
+# However, if they exist locally during `npm publish --dry-run` or `npm publish`,
+# they might get packaged if not ignored. Best to ignore them.
+dist/
+build/
+*.spec
+pyproject.toml
+uv.lock
+poetry.lock
+Pipfile
+Pipfile.lock
+requirements.txt # If src/ is packaged, deps are in pyproject.toml, handled by pip in install script
+
+# Node specific (npm install creates node_modules, but it shouldn't be published)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # We have package.json, but lock files are usually not published
+
+# Project specific dev files / sensitive files
+.env
+.env.*
+*.env
+# .env.example is useful for users, but maybe not in the package itself if README covers setup.
+# For now, let's exclude it from the package to keep it lean.
+.env.example
+scripts/
+tests/
+examples/ # If you add examples later
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Smithery specific (if this file is for local dev tooling only)
+smithery.yaml
