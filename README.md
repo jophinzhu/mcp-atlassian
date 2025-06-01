@@ -84,13 +84,18 @@ MCP Atlassian supports three authentication methods:
 
 ### 📦 2. Installation
 
-#### Option A: Install from PyPI (Recommended)
+#### Option A: Using uv (recommended)
+
+When using [`uv`](https://docs.astral.sh/uv/) no specific installation is needed. We will
+use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run *mcp-atlassian*.
+
+#### Option B: Install from PyPI
 
 ```bash
 pip install mcp-atlassian
 ```
 
-#### Option B: Docker (Alternative)
+#### Option C: Docker (Alternative)
 
 MCP Atlassian is also distributed as a Docker image for containerized environments.
 
@@ -99,7 +104,7 @@ MCP Atlassian is also distributed as a Docker image for containerized environmen
 docker pull ghcr.io/sooperset/mcp-atlassian:latest
 ```
 
-#### Option C: Install from Source
+#### Option D: Install from Source
 
 ```bash
 pip install git+https://github.com/jophinzhu/mcp-atlassian.git
@@ -116,6 +121,70 @@ MCP Atlassian is designed to be used with AI assistants through IDE integration.
 > - **Linux**: `~/.config/Claude/claude_desktop_config.json`
 >
 > **For Cursor**: Open Settings → MCP → + Add new global MCP server
+
+### Configure for VS Code
+
+For quick installation, use one of the one-click install buttons below...
+
+[![Install with UV in VS Code](https://img.shields.io/badge/VS_Code-UV-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%5D%7D) [![Install with UV in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-UV-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%5D%7D&quality=insiders)
+
+[![Install with Docker in VS Code](https://img.shields.io/badge/VS_Code-Docker-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22CONFLUENCE_URL%22%2C%22-e%22%2C%22CONFLUENCE_USERNAME%22%2C%22-e%22%2C%22CONFLUENCE_API_TOKEN%22%2C%22-e%22%2C%22JIRA_URL%22%2C%22-e%22%2C%22JIRA_USERNAME%22%2C%22-e%22%2C%22JIRA_API_TOKEN%22%2C%22ghcr.io/sooperset/mcp-atlassian:latest%22%5D%7D) [![Install with Docker in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Docker-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22CONFLUENCE_URL%22%2C%22-e%22%2C%22CONFLUENCE_USERNAME%22%2C%22-e%22%2C%22CONFLUENCE_API_TOKEN%22%2C%22-e%22%2C%22JIRA_URL%22%2C%22-e%22%2C%22JIRA_USERNAME%22%2C%22-e%22%2C%22JIRA_API_TOKEN%22%2C%22ghcr.io/sooperset/mcp-atlassian:latest%22%5D%7D&quality=insiders)
+
+For manual installation, add the following JSON block to your User Settings (JSON) file in VS Code. You can do this by pressing `Ctrl + Shift + P` and typing `Preferences: Open User Settings (JSON)`.
+
+Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace. This will allow you to share the configuration with others.
+
+> Note that the `mcp` key is needed when using the `mcp.json` file.
+
+<details>
+<summary>Using uvx</summary>
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "mcp-atlassian": {
+        "command": "uvx",
+        "args": ["mcp-atlassian"],
+        "env": {
+          "CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
+          "CONFLUENCE_USERNAME": "your.email@company.com",
+          "CONFLUENCE_API_TOKEN": "your-confluence-api-token",
+          "JIRA_URL": "https://your-company.atlassian.net",
+          "JIRA_USERNAME": "your.email@company.com",
+          "JIRA_API_TOKEN": "your-jira-api-token"
+        }
+      }
+    }
+  }
+}
+```
+</details>
+
+<details>
+<summary>Using Docker</summary>
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "mcp-atlassian": {
+        "command": "docker",
+        "args": ["run", "-i", "--rm", "-e", "CONFLUENCE_URL", "-e", "CONFLUENCE_USERNAME", "-e", "CONFLUENCE_API_TOKEN", "-e", "JIRA_URL", "-e", "JIRA_USERNAME", "-e", "JIRA_API_TOKEN", "ghcr.io/sooperset/mcp-atlassian:latest"],
+        "env": {
+          "CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
+          "CONFLUENCE_USERNAME": "your.email@company.com",
+          "CONFLUENCE_API_TOKEN": "your-confluence-api-token",
+          "JIRA_URL": "https://your-company.atlassian.net",
+          "JIRA_USERNAME": "your.email@company.com",
+          "JIRA_API_TOKEN": "your-jira-api-token"
+        }
+      }
+    }
+  }
+}
+```
+</details>
 
 ### ⚙️ Configuration Methods
 
