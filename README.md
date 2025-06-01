@@ -84,11 +84,25 @@ MCP Atlassian supports three authentication methods:
 
 ### 📦 2. Installation
 
-MCP Atlassian is distributed as a Docker image. This is the recommended way to run the server, especially for IDE integration. Ensure you have Docker installed.
+#### Option A: Install from PyPI (Recommended)
+
+```bash
+pip install mcp-atlassian
+```
+
+#### Option B: Docker (Alternative)
+
+MCP Atlassian is also distributed as a Docker image for containerized environments.
 
 ```bash
 # Pull Pre-built Image
 docker pull ghcr.io/sooperset/mcp-atlassian:latest
+```
+
+#### Option C: Install from Source
+
+```bash
+pip install git+https://github.com/jophinzhu/mcp-atlassian.git
 ```
 
 ## 🛠️ IDE Integration
