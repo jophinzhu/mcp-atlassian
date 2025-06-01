@@ -126,7 +126,7 @@ MCP Atlassian is designed to be used with AI assistants through IDE integration.
 
 For quick installation, use one of the one-click install buttons below...
 
-[![Install with UV in VS Code](https://img.shields.io/badge/VS_Code-UV-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%5D%2C%22env%22%3A%7B%22CONFLUENCE_URL%22%3A%22https%3A//your-company.atlassian.net/wiki%22%2C%22CONFLUENCE_USERNAME%22%3A%22your.email%40company.com%22%2C%22CONFLUENCE_API_TOKEN%22%3A%22your-confluence-api-token%22%2C%22JIRA_URL%22%3A%22https%3A//your-company.atlassian.net%22%2C%22JIRA_USERNAME%22%3A%22your.email%40company.com%22%2C%22JIRA_API_TOKEN%22%3A%22your-jira-api-token%22%7D%7D) [![Install with UV in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-UV-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%5D%2C%22env%22%3A%7B%22CONFLUENCE_URL%22%3A%22https%3A//your-company.atlassian.net/wiki%22%2C%22CONFLUENCE_USERNAME%22%3A%22your.email%40company.com%22%2C%22CONFLUENCE_API_TOKEN%22%3A%22your-confluence-api-token%22%2C%22JIRA_URL%22%3A%22https%3A//your-company.atlassian.net%22%2C%22JIRA_USERNAME%22%3A%22your.email%40company.com%22%2C%22JIRA_API_TOKEN%22%3A%22your-jira-api-token%22%7D%7D&quality=insiders)
+[![Install with UV in VS Code](https://img.shields.io/badge/VS_Code-UV-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%2C%22--confluence-url%22%2C%22https%3A//your-company.atlassian.net/wiki%22%2C%22--confluence-username%22%2C%22your.email%40company.com%22%2C%22--confluence-token%22%2C%22your-confluence-api-token%22%2C%22--jira-url%22%2C%22https%3A//your-company.atlassian.net%22%2C%22--jira-username%22%2C%22your.email%40company.com%22%2C%22--jira-token%22%2C%22your-jira-api-token%22%5D%7D) [![Install with UV in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-UV-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22mcp-atlassian%22%2C%22--confluence-url%22%2C%22https%3A//your-company.atlassian.net/wiki%22%2C%22--confluence-username%22%2C%22your.email%40company.com%22%2C%22--confluence-token%22%2C%22your-confluence-api-token%22%2C%22--jira-url%22%2C%22https%3A//your-company.atlassian.net%22%2C%22--jira-username%22%2C%22your.email%40company.com%22%2C%22--jira-token%22%2C%22your-jira-api-token%22%5D%7D&quality=insiders)
 
 [![Install with Docker in VS Code](https://img.shields.io/badge/VS_Code-Docker-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22CONFLUENCE_URL%22%2C%22-e%22%2C%22CONFLUENCE_USERNAME%22%2C%22-e%22%2C%22CONFLUENCE_API_TOKEN%22%2C%22-e%22%2C%22JIRA_URL%22%2C%22-e%22%2C%22JIRA_USERNAME%22%2C%22-e%22%2C%22JIRA_API_TOKEN%22%2C%22ghcr.io/sooperset/mcp-atlassian:latest%22%5D%2C%22env%22%3A%7B%22CONFLUENCE_URL%22%3A%22https%3A//your-company.atlassian.net/wiki%22%2C%22CONFLUENCE_USERNAME%22%3A%22your.email%40company.com%22%2C%22CONFLUENCE_API_TOKEN%22%3A%22your-confluence-api-token%22%2C%22JIRA_URL%22%3A%22https%3A//your-company.atlassian.net%22%2C%22JIRA_USERNAME%22%3A%22your.email%40company.com%22%2C%22JIRA_API_TOKEN%22%3A%22your-jira-api-token%22%7D%7D) [![Install with Docker in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Docker-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=mcp-atlassian&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22CONFLUENCE_URL%22%2C%22-e%22%2C%22CONFLUENCE_USERNAME%22%2C%22-e%22%2C%22CONFLUENCE_API_TOKEN%22%2C%22-e%22%2C%22JIRA_URL%22%2C%22-e%22%2C%22JIRA_USERNAME%22%2C%22-e%22%2C%22JIRA_API_TOKEN%22%2C%22ghcr.io/sooperset/mcp-atlassian:latest%22%5D%2C%22env%22%3A%7B%22CONFLUENCE_URL%22%3A%22https%3A//your-company.atlassian.net/wiki%22%2C%22CONFLUENCE_USERNAME%22%3A%22your.email%40company.com%22%2C%22CONFLUENCE_API_TOKEN%22%3A%22your-confluence-api-token%22%2C%22JIRA_URL%22%3A%22https%3A//your-company.atlassian.net%22%2C%22JIRA_USERNAME%22%3A%22your.email%40company.com%22%2C%22JIRA_API_TOKEN%22%3A%22your-jira-api-token%22%7D%7D&quality=insiders)
 
@@ -145,15 +145,15 @@ Optionally, you can add it to a file called `.vscode/mcp.json` in your workspace
     "servers": {
       "mcp-atlassian": {
         "command": "uvx",
-        "args": ["mcp-atlassian"],
-        "env": {
-          "CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
-          "CONFLUENCE_USERNAME": "your.email@company.com",
-          "CONFLUENCE_API_TOKEN": "your-confluence-api-token",
-          "JIRA_URL": "https://your-company.atlassian.net",
-          "JIRA_USERNAME": "your.email@company.com",
-          "JIRA_API_TOKEN": "your-jira-api-token"
-        }
+        "args": [
+          "mcp-atlassian",
+          "--confluence-url", "https://your-company.atlassian.net/wiki",
+          "--confluence-username", "your.email@company.com",
+          "--confluence-token", "your-confluence-api-token",
+          "--jira-url", "https://your-company.atlassian.net",
+          "--jira-username", "your.email@company.com",
+          "--jira-token", "your-jira-api-token"
+        ]
       }
     }
   }
