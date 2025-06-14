@@ -1,4 +1,9 @@
-# MCP Atlassian
+# MCP Atlassian (Fork)
+
+> **🍴 Fork Information**  
+> This is a customized fork of [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) with additional PyPI publishing features and enhanced VS Code integration.  
+> **📖 For the latest upstream documentation**: See the [original README](https://github.com/sooperset/mcp-atlassian/blob/main/README.md)  
+> **⚡ Fork-specific features**: PyPI publishing setup, enhanced VS Code configuration, and distribution improvements.
 
 ![PyPI Version](https://img.shields.io/pypi/v/mcp-atlassian)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/mcp-atlassian)
@@ -633,6 +638,8 @@ Here's a complete example of setting up multi-user authentication with streamabl
 - `jira_update_issue`: Update an existing issue
 - `jira_transition_issue`: Transition an issue to a new status
 - `jira_add_comment`: Add a comment to an issue
+- `jira_get_project_versions`: List all fix versions for a project
+- `jira_create_version`: Create a new version (fix version) in a Jira project
 
 #### Confluence Tools
 
