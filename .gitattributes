@@ -1,2 +1,5 @@
 # Always keep our fork's version of README.md
 README.md merge=ours
+
+# Ignore lint.yml from upstream merges (we don't want this workflow)
+.github/workflows/lint.yml merge=ours
