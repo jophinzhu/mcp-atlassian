@@ -109,12 +109,6 @@ MCP Atlassian is also distributed as a Docker image for containerized environmen
 docker pull ghcr.io/sooperset/mcp-atlassian:latest
 ```
 
-#### Option D: Install from Source
-
-```bash
-pip install git+https://github.com/jophinzhu/mcp-atlassian.git
-```
-
 ## 🛠️ IDE Integration
 
 MCP Atlassian is designed to be used with AI assistants through IDE integration.
